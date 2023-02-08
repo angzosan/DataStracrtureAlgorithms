@@ -16,6 +16,7 @@ public class Sort {
         return arr;
     }
 
+    /** fix */
     public int heapSort(int[] arr, int x){
         int pos = 0;
         for(int i=0;i<arr.length;i++){
@@ -47,6 +48,7 @@ public class Sort {
         return arr;
     }
 
+    /** fix */
     public int mergeSort(int[] arr, int x){
         int pos = 0;
         for(int i=0;i<arr.length;i++){
@@ -58,6 +60,7 @@ public class Sort {
         return pos;
     }
 
+    /** fix */
     public int quickSort(int[] arr, int x){
         int pos = 0;
         for(int i=0;i<arr.length;i++){
@@ -69,6 +72,7 @@ public class Sort {
         return pos;
     }
 
+    /** fix */
     public int countingSort(int[] arr, int x){
         int pos = 0;
         for(int i=0;i<arr.length;i++){
@@ -78,6 +82,20 @@ public class Sort {
             }
         }
         return pos;
+    }
+
+    public int[] bubbleSort(int[] arr){
+        int temp = 0;
+        for(int i=0;i<arr.length;i++) {
+            for (int j = i + 1; j <arr.length-1 ; j++) {
+                if (arr[j] <  arr[j+1]) {
+                    temp = arr[i+1];
+                    arr[i+1] = arr[i];
+                    arr[i] = temp;
+                }
+            }
+        }
+        return arr;
     }
 
 }
